@@ -73,15 +73,23 @@ workflows:
       - deployment:
           requires:
             - confirm
-    morning-routine:
-      triggers:
-        - schedule:
-            cron: "0 8 * * 1-5"
-            filters: 
-              branches: 
-                only:
-                  - master
-                  - beta
-      jobs:
-        - build
-        
+  morning-routine:
+    triggers:
+      - schedule:
+          cron: "0 8 * * 1-5"
+          filters: 
+            branches: 
+              only:
+                - master
+                - beta
+    jobs:
+      - build
+      - one:
+          requires:
+            - build
+      - two:
+          requires:
+            - one
+      - three:
+          requires:
+            - one
