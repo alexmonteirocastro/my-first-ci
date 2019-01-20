@@ -30,9 +30,9 @@ workflows:
   one_and_two:
     jobs:
       - build
-      - one
+      - one:
         requires: 
           - build
-      - two
+      - two:
         requires: 
           - one
