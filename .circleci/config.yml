@@ -11,15 +11,24 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-  build:
+  one:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "Another hello"
-  build:
+      - run: sleep 25
+  two:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "And a goobye"    
+      - run: sleep 25
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - build
+      - one
+      - two
