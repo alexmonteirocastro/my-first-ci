@@ -16,7 +16,7 @@ Also I have a scheduled flow.
   - This flow uses cron and a filter
   - It should run every working day at 8AM
 
-I have also configured my git settings to val;idate the YAML confighuration file before every commit. 
+I have also configured my git settings to val;idate the YAML confighuration file before each commit. 
 
 ## Future plans
 
