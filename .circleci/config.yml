@@ -27,9 +27,12 @@ jobs:
       - run: sleep 25
 workflows:
   version: 2
-  build-test-and-deploy:
+  build-one-and-two:
     jobs:
       - build
       - one:
           requires:
             - build
+      - two: 
+          requires:
+            - one
