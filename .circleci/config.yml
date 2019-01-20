@@ -63,9 +63,13 @@ workflows:
       - four: 
           requires:
             - build
-      - deployment:
-          requires:
+      - confirm:
+          type: approval
+          requires: 
             - one
             - two
             - three
             - four
+      - deployment:
+          requires:
+            - confirm
