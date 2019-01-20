@@ -84,12 +84,4 @@ workflows:
                   - beta
       jobs:
         - build
-        - one:
-            requires:
-              - build
-        - two:
-            requires:
-              - one
-        - three:
-            requires:
-              - one
+        
