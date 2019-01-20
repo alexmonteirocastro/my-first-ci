@@ -33,6 +33,3 @@ workflows:
       - one:
         requires: 
           - build
-      - two:
-        requires: 
-          - one
