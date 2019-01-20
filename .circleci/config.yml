@@ -16,14 +16,28 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "Another hello"
+      - run: echo "This is the first acceptance test"
       - run: sleep 25
   two:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "And a goobye"    
+      - run: echo "This is the second acceptance test"    
+      - run: sleep 25
+  three:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "This is the third acceptance test"    
+      - run: sleep 25
+  four:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "This is the fourth acceptance test"    
       - run: sleep 25
 workflows:
   version: 2
