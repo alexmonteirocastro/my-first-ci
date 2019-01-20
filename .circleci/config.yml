@@ -11,3 +11,15 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "Another hello"
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "And a goobye"    
