@@ -35,4 +35,10 @@ workflows:
             - build
       - two: 
           requires:
-            - one
+            - build
+      - three: 
+          requires:
+            - build
+      - four: 
+          requires:
+            - build
