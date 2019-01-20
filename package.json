@@ -1,0 +1,19 @@
+{
+  "name": "my-first-ci",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "check:yaml": "circleci config validate -c .circleci/config.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmonteirocastro/my-first-ci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmonteirocastro/my-first-ci/issues"
+  },
+  "homepage": "https://github.com/alexmonteirocastro/my-first-ci#readme"
+}
